@@ -9,20 +9,7 @@
 /* Config was built with dmenu-flexipatch:             */
 /* https://github.com/bakkeby/dmenu-flexipatch         */
 
-/* The patches I have enabled are:   
-* - alpha
-* - border
-* - center
-* - fuzzyhighlight
-* - fuzzymatch
-* - grid
-* - lineheight
-* - morecolor
-* - mousesupport
-* - numbers
-* - XYW  */
-
-static int topbar = 1;            /* -b  option; if 0, dmenu appears at bottom */
+static int topbar = 1;            /* -b  option; if 0, dmenu appears at bottom. Irrelevant if in the middle, see CENTER_PATCH */
 
 #if ALPHA_PATCH
 static int opacity = 0;           /* -o  option; if 0, then alpha is disabled */
@@ -41,7 +28,7 @@ static int instant = 0;           /* -n  option; if 1, selects matching item wit
 #endif // INSTANT_PATCH
 
 #if CENTER_PATCH
-static int center = 0;            /* -c  option; if 0, dmenu won't be centered on the screen */
+static int center = 1;            /* -c  option; if 0, dmenu won't be centered on the screen */
 static int min_width = 680;       /* minimum width when centered */
 #endif // CENTER_PATCH
 
@@ -59,8 +46,7 @@ static char *fonts[] =
 static const char *fonts[] = 
 #endif // XRESOURCES_PATCH
 {
-	"Hack:pixelsize=11:antialias=true:autohint=true",
-	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
+	"Fantasque Sans Mono:pixelsize=9:antialias=true:autohint=true"
 };
 #endif // PANGO_PATCH
 
@@ -93,7 +79,7 @@ static const unsigned int alphas[][3]      = {
 
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 10;
 
 /*
  * SELECT YOUR COLOR SCHEME
@@ -136,7 +122,7 @@ static const char worddelimiters[] = " ";
 
 #if BORDER_PATCH
 /* Size of the window border */
-static unsigned int border_width = 0;
+static unsigned int border_width = 2;
 #endif // BORDER_PATCH
 
 #if PREFIXCOMPLETION_PATCH

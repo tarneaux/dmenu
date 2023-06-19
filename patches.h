@@ -5,7 +5,7 @@
  * when including this patch.
  * https://github.com/bakkeby/patches/blob/master/dmenu/dmenu-alpha-5.0_20210725_523aa08.diff
  */
-#define ALPHA_PATCH 1
+#define ALPHA_PATCH 0
 
 /* This patch adds a border around the dmenu window. It is intended to be used with the center
  * or xyw patches, to make the menu stand out from similarly coloured windows.
