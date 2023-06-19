@@ -1,0 +1,8 @@
+# Files generated on build
+dmenu
+dmenu.o
+drw.o
+stest
+stest.o
+util.o
+
