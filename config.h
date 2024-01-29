@@ -46,7 +46,7 @@ static char *fonts[] =
 static const char *fonts[] = 
 #endif // XRESOURCES_PATCH
 {
-	"Fantasque Sans Mono:pixelsize=9:antialias=true:autohint=true"
+	"Fantasque Sans Mono:pixelsize=13:antialias=true:autohint=true"
 };
 #endif // PANGO_PATCH
 
